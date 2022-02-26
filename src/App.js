@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { IonPhaser } from "@ion-phaser/react";
+import { game } from "./phaser/src/index";
+import "./phaser/index.css";
+import ModalEducation from "./components/ModalEducation";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <IonPhaser game={game} initialize={true} />
+      <ModalEducation />
     </div>
   );
 }
